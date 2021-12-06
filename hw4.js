@@ -1,18 +1,30 @@
-i = 1
-while (i<5=){
-    console.log('Menu')
-    console.log('1.Add')
-    console.log('2.Subtract')
-    console.log('3.Multiply')
-    console.log('4.Divide')
-    console.log('5.Exit')
-    let prompt = require('prompt-sync')()
-    const operator = prompt('Select an option')
-
-switch(calculator){
-    case1:
-    case2:
-    case3:
-    case4:
-    default;
-
+var prompt=require("prompt-sync")();
+console.log("1 = add\n2 = subtract\n3 = multiply\n4 = divide\n5 = exit");
+let operator= num(
+    prompt("Choose an operation.")
+);
+if (operator ===5) {
+    console.log("Operation invalid.");
+} else if (operator === 1 || 2 || 3 || 4) {
+  let num1 = Number(prompt("Whats the first number: "));
+  let num2 = Number(prompt("Whats the second number: "));
+  switch (operator) {
+    case 1:
+      console.log(num1 + num2);
+      break;
+    case 2:
+      console.log(num1 - num2);
+      break;
+    case 3:
+      console.log(num1 / num2);
+      break;
+    case 4:
+      console.log(num1 * num2);
+      break;
+    default:
+      console.log("Operation invalid.");
+      break;
+  }
+} else {
+  console.log("Invalid Menu Choice.");
+}
